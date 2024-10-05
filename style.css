@@ -1,0 +1,358 @@
+* {
+    font-family: "Poppins", sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    
+}
+
+body {
+    background-color: #94D9EA;
+}
+
+.main-content {
+    min-height: 100vh;
+    width: 80%;
+    margin: 2rem auto;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    
+}
+
+.left-section {
+    grid-column: span 2;
+    height: 100%;
+    background-color: #00324A;
+    
+}
+
+.right-section {
+    grid-column: span 5;
+    background-color: rgb(221, 252, 242);
+    height: 100%;
+}
+
+.left-content {
+    padding: 2rem 3rem;
+}
+
+.profile {
+    width: 100%;
+    border-bottom: 1px solid #000;
+}
+
+.image{
+    width: 100%;
+    text-align: center;
+}
+
+.profile img {
+    width: 100%;
+    border-radius: 50%;
+    border: 8px solid #004883;
+    
+}
+
+.name {
+    font-size: 2rem;
+    color: white;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 1.5rem 0;
+}
+
+.career {
+    font-size: 1.2rem;
+    color: #94D9EA;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding-bottom: 1.2rem;
+}
+
+.main-title {
+    font-size: 1.6rem;
+    letter-spacing: 1px;
+    color: white;
+    padding-top: 2rem;
+}
+
+.contact-list {
+    padding: 1rem 0;
+}
+
+.contact-list li {
+    padding: 0.4rem 0;
+    display: flex;
+    align-items: center;
+    color: #4fa9dd;
+}
+
+.contact-list li i {
+    padding-right: 0.6rem;
+    font-size: 1.2rem;
+    color: #8cabda;
+}
+
+.bar {
+    font-size: 23px;
+}
+
+.technical-bars .bar {
+    margin-top: 0.4rem;
+}
+
+.technical-bars .bar:first-child {
+    margin-top: 0;
+}
+
+.technical-bars .bar:last-child {
+    margin-bottom: 0;
+}
+
+.technical-bars .bar .info {
+    margin-bottom: 5px;
+}
+
+.technical-bars .bar .info span {
+    font-size: 17px;
+    font-weight: 500;
+    animation: showText 0.5s 1s linear forwards;
+    opacity: 0;
+    color: white;
+}
+
+.technical-bars .bar .progress-line {
+    position: relative;
+    border-radius: 10px;
+    width: 100%;
+    height: 5px;
+    background-color: #000;
+    animation: animate 1s cubic-bezier(1, 0, 0.5, 1) forwards;
+    transform: scaleX(0);
+    transform-origin: left;
+}
+@keyframes animate{
+    100% {
+        transform: scaleX(1);
+    }
+}
+
+.technical-bars .bar .progress-line span{
+    height: 100%;
+    background-color: #0ef;
+    position: absolute;
+    border-radius: 10px;
+    animation: animate 1s 1s cubic-bezier(1, 0, 0.5, 1) forwards;
+    transform: scaleX(0);
+    transform-origin: left;
+}
+
+.progress-line.html span {
+    width: 86%;
+}
+.progress-line.c span {
+    width: 40%;
+}
+.progress-line.python span {
+    width: 70%;
+}
+.progress-line.vue span {
+    width: 50%;
+}
+
+
+
+.progress-line.html span::after {
+    content: "86%";
+}
+.progress-line.c span::after {
+    content: "40%";
+}
+.progress-line.python span::after {
+    content: "70%";
+}
+.progress-line.vue span::after {
+    content: "50%";
+}
+.progress-line span::after {
+    position: absolute;
+    padding: 1px 8px;
+    background-color: #000;
+    color: #fff;
+    font-size: 12px;
+    border-radius: 3px;
+    top: -28px;
+    right: -20px;
+    animation: showText 0.5s 1.5s linear forwards;
+    opacity: 0;
+}
+.progress-line span::before {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    border: 7px solid transparent;
+    border-bottom-width: 0px;
+    border-right-width: 0px;
+    border-top-color: #000;
+    top: -10px;
+    right: 0;
+    animation: showText 0.5s 1.5s linear forwards;
+    opacity: 0;
+}
+
+@keyframes showText {
+    100% {
+        opacity: 1;
+    }
+}
+
+.cert-add-list {
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    letter-spacing: 1px;
+    color: #4fa9dd;
+}
+
+.right-main-content {
+    padding: 2rem 3rem;
+
+}
+
+.right-title {
+    letter-spacing: 1px;
+    color: #2f80ed;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    position: relative;
+}
+
+.right-title::after{
+    content: "";
+    position: absolute;
+    width: 60%;
+    height: .2rem;
+    background-color: #2f80ed;
+    border-radius: 10px;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+}
+
+.right-main-content p {
+    color: #225095;
+    font-size: 1rem;
+}
+
+.sect {
+    padding-bottom: 2rem;
+}
+
+.timeline {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.tl-title {
+    letter-spacing: 1px;
+    font-size: 1.4rem;
+    color: #002333;
+}
+
+.tl-title-2 {
+    letter-spacing: 1px;
+    font-size: 1.4rem;
+    color: #005982;
+    
+}
+
+.tl-content {
+    border-left: 2px solid #03afff ;
+    padding-left: 2rem;
+    position: relative;
+    padding-bottom: 2rem;
+}
+
+.tl-title-2::before {
+    content: "";
+    position: absolute;
+    width: 0.8rem;
+    height: 0.8rem;
+    background-color: #005982;
+    border-radius: 50%;
+    transform: translateX(-55%);
+    left: 0;
+}
+
+.para {
+    line-height: 1.6rem;
+    color: black !important;
+    font-size: 1.1rem;
+}
+
+.footer {
+    background: rgb(9, 79, 109);
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 50px;
+}
+
+.footer p{
+    color: #fff;
+    margin: 0;
+    font-size: 15px;
+    padding: 7px;
+}
+
+/*Media Querries*/
+@media screen and (max-width: 823px) {
+    .right-title::after {
+        width: 40%;
+    }
+}
+
+@media screen and (max-width: 681px) {
+    .right-title::after {
+        width: 20%;
+    }
+}
+
+@media screen and (max-width: 780px) {
+    .timeline {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+@media screen and (max-width: 780px) {
+    .left-section {
+        grid-column: span 3;
+    }
+    .right-section {
+        grid-column: span 4;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .main-content {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .profile img {
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .profile img {
+        width: 70%;
+    }
+}
+
+@media screen and (max-width: 390px) {
+    .name {
+        font-size: 1.5rem;
+    }
+    
+}
+
